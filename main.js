@@ -19,6 +19,7 @@ const template = document.querySelector("template").content;
     const clone = template.cloneNode(true);
     clone.querySelector("h1.name").textContent = dish.name;
     clone.querySelector("p.description").textContent = dish.shortdescription;
+    clone.querySelector("img.picture").src = "https://kea-alt-del.dk/t5/site/imgs/" + "small/" + dish.image + "-sm.jpg";
 
     const parent = document.querySelector("main");
     parent.appendChild(clone)
