@@ -1,0 +1,83 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+main {
+    font-family: Avenir, Roboto, Helvetica, san-serif;
+    font-size: 0.8rem;
+}
+
+article button {
+    background: beige;
+}
+
+.deals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.sale-item {
+    display: flex;
+    flex-flow: column;
+    border: 1px solid grey;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.sale-item button {
+    padding: 10px 0px;
+    margin: 5px 0;
+}
+
+.sale-item img {
+    align-self: center;
+}
+
+.sale-item p {
+    margin: 1rem;
+}
+
+.sale {
+    width: 20%;
+}
+
+.veg {
+    width: 20%;
+}
+
+.sold {
+    width: 50%;
+}
+
+.discount {
+    text-decoration: line-through;
+}
+
+.price {
+    color: red;
+}
+
+.header {
+    background-color: beige;
+    display: grid;
+    grid-auto-flow: column;
+
+}
+
+.logo {
+    width: 15%;
+}
+
+header h1 {}
+
+.footer {
+    background-color: beige;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+footer h1 {
+    align-self: center;
+}
