@@ -20,6 +20,8 @@ const template = document.querySelector("template").content;
     clone.querySelector("h1.name").textContent = dish.name;
     clone.querySelector("p.description").textContent = dish.shortdescription;
     clone.querySelector("img.picture").src = "https://kea-alt-del.dk/t5/site/imgs/" + "small/" + dish.image + "-sm.jpg";
+    clone.querySelector("p.discount").textContent = dish.discount;
+    clone.querySelector("p.price").textContent = dish.price + " dkk";
 
     const parent = document.querySelector("main");
     parent.appendChild(clone)
