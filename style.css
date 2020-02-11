@@ -4,13 +4,51 @@
     box-sizing: border-box;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     font-family: Avenir, Roboto, Helvetica, san-serif;
     font-size: 0.8rem;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1dc;
+}
+
+li {
+    float: left;
+}
+
+a {
+    display: block;
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #f5f5dc;
+}
+
+a:hover {
+    background-color: #f1f1dc;
+}
+
 article button {
     background: beige;
+}
+
+article {
+    -webkit-box-shadow: 0px 0px 36px -27px rgba(0, 0, 0, 0.69);
+    -moz-box-shadow: 0px 0px 36px -27px rgba(0, 0, 0, 0.69);
+    box-shadow: 0px 0px 36px -27px rgba(0, 0, 0, 0.69);
+    border-radius: 1%;
 }
 
 .deals {
@@ -21,7 +59,6 @@ article button {
 .sale-item {
     display: flex;
     flex-flow: column;
-    border: 1px solid grey;
     margin: 1rem;
     padding: 1rem;
 }
@@ -29,6 +66,11 @@ article button {
 .sale-item button {
     padding: 10px 0px;
     margin: 5px 0;
+    background-color: beige;
+}
+
+button:hover {
+    background-color: #f1f1dc;
 }
 
 .sale-item img {
@@ -51,11 +93,11 @@ article button {
     width: 50%;
 }
 
-.discount {
+.price {
     text-decoration: line-through;
 }
 
-.price {
+.discount {
     color: red;
 }
 
