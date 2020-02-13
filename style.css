@@ -34,6 +34,7 @@ a {
     padding: 14px 16px;
     text-decoration: none;
     background-color: #f5f5dc;
+    text-transform: uppercase;
 }
 
 a:hover {
@@ -52,7 +53,7 @@ article {
 }
 
 section {
-        display: grid;
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -75,10 +76,6 @@ button:hover {
 
 .sale-item img {
     align-self: center;
-}
-
-.sale-item p {
-    margin: 1rem;
 }
 
 .sale {
@@ -109,10 +106,10 @@ button:hover {
 }
 
 .logo {
-    width: 15%;
+    width: 100px;
 }
 
-header h1 {}
+
 
 .footer {
     background-color: beige;
@@ -120,29 +117,65 @@ header h1 {}
     grid-auto-flow: column;
 }
 
-footer h1 {
-    align-self: center;
-}
 
 img.picture {
     width: 100%;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
+
 .modal-background {
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
+
 .modal-content {
-  background-color: #fefefe;
-  border: 1px solid #7c1f17;
-  margin: 1em;
-  padding: 2em;
+    background-color: #fefefe;
+    border: 1px solid #7c1f17;
+    margin: 1em;
+    padding: 2em;
+}
+
+body h4 {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 3px 2px beige;
+}
+
+.modal-image {
+    width: 100%;
+}
+
+.sale-item h1 {
+    font-size: 1.2rem;
+    text-shadow: 3px 2px beige;
+}
+
+.sale-item p {
+    font-size: 1rem;
+}
+
+.modal-name {
+    font-size: 1.2rem;
+    text-shadow: 3px 2px beige;
+}
+
+.modal-description {
+    font-size: 1rem;
+}
+
+.modal-price {
+    text-decoration: line-through;
+}
+
+.modal-discount {
+    color: red;
 }

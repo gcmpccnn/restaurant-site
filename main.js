@@ -1,6 +1,6 @@
 const modal = document.querySelector(".modal-background");
 modal.addEventListener("click", () => {
-  modal.classList.add("hide");
+    modal.classList.add("hide");
 });
 
 fetch("https://kea-alt-del.dk/t5/api/categories")
@@ -18,9 +18,9 @@ function categories(data) {
 
         const section = document.createElement("section");
         section.id = cat;
-        const h2 = document.createElement("h2");
-        h2.textContent = cat;
-        document.querySelector("main").appendChild(h2);
+        const h4 = document.createElement("h4");
+        h4.textContent = cat;
+        document.querySelector("main").appendChild(h4);
 
         document.querySelector("main").appendChild(section);
     })
@@ -62,10 +62,10 @@ function showDish(dish) {
     }
 
     clone.querySelector("button").addEventListener("click", () => {
-    fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
-      .then(res => res.json())
-      .then(showDetails);
-  });
+        fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
+            .then(res => res.json())
+            .then(showDetails);
+    });
 
     //    clone.querySelector("p.discount").textContent = dish.discount;
     //    clone.querySelector("p.price").textContent = dish.price + " dkk";
@@ -75,8 +75,20 @@ function showDish(dish) {
 }
 
 function showDetails(data) {
-  modal.querySelector(".modal-name").textContent = data.name;
-  modal.querySelector(".modal-description").textContent = data.longdescription;
-  //...
-  modal.classList.remove("hide");
+    modal.querySelector(".modal-name").textContent = data.name;
+    modal.querySelector(".modal-description").textContent = data.longdescription;
+    modal.querySelector(".modal-image").src = "https://kea-alt-del.dk/t5/site/imgs/" + "large/" + data.image + ".jpg";
+    if (data.discount) {
+        modal.querySelector("h3.modal-price span").textContent = data.price;
+        modal.querySelector("h3.modal-price").style.display = "block";
+        modal.querySelector("h2.modal-discount span").textContent = Math.round(data.price - data.price * data.discount / 100);
+        modal.querySelector("img.modal-sale").style.display = "block";
+    } else {
+        modal.querySelector("h3.modal-price").style.display = "none";
+
+        modal.querySelector("h2.modal-discount span").textContent = data.price
+        modal.querySelector("img.modal-sale").style.display = "none";
+    }
+    //...
+    modal.classList.remove("hide");
 }
