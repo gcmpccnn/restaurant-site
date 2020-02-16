@@ -14,12 +14,16 @@ main {
     font-size: 0.8rem;
 }
 
+body {
+    background-color: #86DEB7;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #f1f1dc;
+    background-color: #86DEB7;
 }
 
 li {
@@ -29,20 +33,23 @@ li {
 a {
     display: block;
     float: left;
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    background-color: #f5f5dc;
+    background-color: #ADEEE3;
     text-transform: uppercase;
+    font-size: 2rem;
+    align-self: center;
+    margin-top: 55px;
+/*
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+*/
 }
 
 a:hover {
-    background-color: #f1f1dc;
-}
-
-article button {
-    background: beige;
+    background-color: #86DEB7;
 }
 
 article {
@@ -62,57 +69,98 @@ section {
     flex-flow: column;
     margin: 1rem;
     padding: 1rem;
+    background-color: #63B995;
 }
 
 .sale-item button {
     padding: 10px 0px;
     margin: 5px 0;
-    background-color: beige;
+    margin-top: auto;
+    background-color: #423E28;
+    border: none;
+    color: white;
 }
 
 button:hover {
-    background-color: #f1f1dc;
+    background-color: #50723C;
 }
 
 .sale-item img {
     align-self: center;
+
 }
 
+
 .sale {
-    width: 20%;
+    width: 25%;
+    margin-top: -45px;
+    margin-left: 195px;
+    position: relative;
+}
+
+.modal-sale {
+    width: 15%;
+    margin-top: -45px;
+    margin-left: 220px;
+    position: relative;
 }
 
 .veg {
-    width: 20%;
+    width: 23%;
+    margin-top: -60px;
+    margin-left: -15px;
+    position: relative;
+}
+
+.modal-veg {
+    width: 13%;
+    top: -80px;
+    margin-right: 10px;
+    position: relative;
 }
 
 .sold {
     width: 50%;
+    margin-bottom: 5px;
+}
+
+.modal-sold {
+    width: 50%;
+}
+
+.psold {
+    border: 1px solid black;
+    background-color: red;
+    text-align: center;
+    padding: 7px;
 }
 
 .price {
     text-decoration: line-through;
+    margin-top: auto;
 }
 
 .discount {
     color: red;
+    margin-top: auto;
 }
 
 .header {
-    background-color: beige;
+    background-color: #ADEEE3;
     display: grid;
     grid-auto-flow: column;
 
 }
 
 .logo {
-    width: 100px;
+    width: 200px;
+    margin: 10px;
 }
 
 
 
 .footer {
-    background-color: beige;
+    background-color: #ADEEE3;
     display: grid;
     grid-auto-flow: column;
 }
@@ -141,26 +189,41 @@ img.picture {
     border: 1px solid #7c1f17;
     margin: 1em;
     padding: 2em;
+    overflow-y: auto;
+    display: !important;
+    width: 600px;
+   height: 400px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -300px;
+   margin-top: -200px;
+
 }
 
 body h4 {
     text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
-    text-shadow: 3px 2px beige;
+    color: white;
+/*
+    -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+*/
 }
 
 .modal-image {
-    width: 100%;
+    width: 50%;
 }
 
 .sale-item h1 {
     font-size: 1.2rem;
-    text-shadow: 3px 2px beige;
+    color: white;
 }
 
 .sale-item p {
     font-size: 1rem;
+    color: white;
 }
 
 .modal-name {
@@ -178,4 +241,57 @@ body h4 {
 
 .modal-discount {
     color: red;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+.header {
+    background-color: #ADEEE3;
+    display: block;
+}
+    .nav {
+        height: 30%;
+    }
+
+    a {
+    display: block;
+    float: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #ADEEE3;
+    text-transform: uppercase;
+    font-size: 1rem;
+    align-self: center;
+    margin-top: 0;
+    border: 1px solid #86DEB7;
+}
+
+    .logo {
+    width: 100px;
+    margin: 10px;
+}
+
+    .modal-content {
+    background-color: #fefefe;
+    border: 1px solid #7c1f17;
+    margin: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    display: !important;
+    width: 240px;
+   height: 400px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -120px;
+   margin-top: -200px;
+
+}
+
+
 }

@@ -39,12 +39,24 @@ function getProducts() {
         })
 }
 
+//function getProduct() {
+//    fetch("https://kea-alt-del.dk/t5/api/product")
+//        .then(function (response) {
+//            return response.json()
+//        })
+//        .then(function (data) {
+//            showData(data)
+//        })
+//}
+
 
 function showData(jsonData) {
     console.log(jsonData)
 
     jsonData.forEach(showDish)
 }
+
+
 
 function showDish(dish) {
     const template = document.querySelector("template").content;
@@ -59,6 +71,13 @@ function showDish(dish) {
         clone.querySelector("h3.price").remove();
         clone.querySelector("h2.discount span").textContent = dish.price
         clone.querySelector("img.sale").remove();
+    }
+
+    if (!dish.vegetarian) {
+        clone.querySelector("img.veg").remove();
+    }
+    if (!dish.soldout) {
+        clone.querySelector(".psold").remove();
     }
 
     clone.querySelector("button").addEventListener("click", () => {
@@ -77,6 +96,8 @@ function showDish(dish) {
 function showDetails(data) {
     modal.querySelector(".modal-name").textContent = data.name;
     modal.querySelector(".modal-description").textContent = data.longdescription;
+    modal.querySelector(".alcohol span").textContent = data.alcohol;
+//    modal.querySelector(".all span").textContent = data.allergens[1];
     modal.querySelector(".modal-image").src = "https://kea-alt-del.dk/t5/site/imgs/" + "large/" + data.image + ".jpg";
     if (data.discount) {
         modal.querySelector("h3.modal-price span").textContent = data.price;
@@ -88,6 +109,16 @@ function showDetails(data) {
 
         modal.querySelector("h2.modal-discount span").textContent = data.price
         modal.querySelector("img.modal-sale").style.display = "none";
+    }
+
+    if (!data.vegetarian) {
+        modal.querySelector("img.modal-veg").style.display = "none";
+    }
+    if (!data.soldout) {
+        modal.querySelector("img.modal-sold").style.display = "none";
+    }
+    if (!data.alcohol) {
+        modal.querySelector(".alcohol").style.display = "none";
     }
     //...
     modal.classList.remove("hide");

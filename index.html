@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,7 @@
 <body>
 
     <div class="header">
-        <img src="img/logo.png" alt="restaurant logo" class="logo">
+        <img src="img/1x/logo.png" alt="restaurant logo" class="logo">
         <nav>
             <!--
             <ul>
@@ -34,15 +35,21 @@
                 <article class="sale-item">
                     <h1 class="name">Spag</h1>
                     <p class="description">Tasty Cacio e Pepe spag directly from Italy.</p>
-                    <img class="picture" src="img/spag.jfif" alt="You get: a white computer with matching peripherals">
+                    <div class="imgDiv">
+                        <img class="picture" src="img/spag.jfif" alt="You get: a white computer with matching peripherals">
+                        <img src="img/sale.png" alt="on sale" class="sale">
+                        <img src="img/veg.png" alt="vegetarian" class="veg">
+
+                    </div>
                     <h3 class="price"><span>59</span> dkk</h3>
                     <h2 class="discount"><span>100</span> dkk</h2>
 
-                    <img src="img/sale.png" alt="on sale" class="sale">
-                    <!--
-            <img src="img/veg.png" alt="vegetarian" class="veg">
-            <img src="img/sold.png" alt="sold out" class="sold">
--->
+
+
+
+
+<!--                    <img src="img/sold.png" alt="sold out" class="sold">-->
+                   <p class="psold">SOLD OUT</p>
                     <button>READ MORE</button>
                 </article>
             </section>
@@ -54,11 +61,18 @@
         <div class="modal-background hide">
             <div class="modal-content">
                 <h3 class="modal-name">NAME</h3>
-                <img src="" alt="" class="modal-image" />
+                <div class="modal-imgDiv">
+                    <img src="" alt="" class="modal-image" />
+                    <img src="img/sale.png" alt="on sale" class="modal-sale">
+                    <img src="img/veg.png" alt="vegetarian" class="modal-veg">
+                </div>
                 <p class="modal-description">LONG DESCRIPTION</p>
                 <h3 class="modal-price"><span>#</span> dkk</h3>
                 <h2 class="modal-discount"><span>#</span> dkk</h2>
-                <img src="img/sale.png" alt="on sale" class="modal-sale">
+                <img src="img/sold.png" alt="sold out" class="modal-sold">
+                <!--                <p class="all">Allergies: <span>#</span></p>-->
+                <p class="alcohol">Vol: <span>#</span>%</p>
+
             </div>
         </div>
     </main>
@@ -68,4 +82,6 @@
     </div>
 
     <script src="main.js"></script>
-</body></html>
+</body>
+
+</html>
